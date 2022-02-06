@@ -160,4 +160,7 @@ bin/
 
 # Simulation GUI and other tools window save file
 *-window.json
-.gradle/*
+
+# Ignore .gradle files that update every gradle task run
+file-system.probe
+*.lock
