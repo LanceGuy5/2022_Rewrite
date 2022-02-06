@@ -1,5 +1,11 @@
 import org.gradle.internal.os.OperatingSystem
 
+// `settings.gradle` is the file that is global for the Gradle project and is ran before any `build.gradle`s
+// Uses plugin Management to add FRC wpilib plugin in order to configure the path to the WPI library
+// This is ran because WPI could be installed to single user only, not for all users in the Program Files, where it would be found by the path
+// First it finds the OS, then checks in the home or public folders for the WPI library and sets that to `frcHome`
+// It uses `frcHome` var to set to a maven repo on `frcHomeMaven` and stages the plgin name as 'frcHome'
+
 pluginManagement {
     repositories {
         mavenLocal()
