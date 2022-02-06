@@ -4,7 +4,7 @@ package frc.robot.commands.auto;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.commands.drivetrain.DriveStraightCommand;
-import frc.robot.subsystems.CommandSubsystems.DriveSubsystem;
+import frc.robot.subsystems.base.DriveSubsystem;
 
 public class DriveStraightForTimeCommand extends SequentialCommandGroup{
     public final DriveSubsystem m_DriveSubsystem; // i had this as private

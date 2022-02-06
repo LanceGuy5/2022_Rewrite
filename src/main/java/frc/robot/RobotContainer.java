@@ -15,7 +15,10 @@ import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.FMSConstants;
 import frc.robot.commands.auto.DriveStraightForTimeCommand;
 import frc.robot.commands.auto.doNothingCommand;
-import frc.robot.subsystems.CommandSubsystems.DriveSubsystem;
+import frc.robot.subsystems.base.Climber;
+import frc.robot.subsystems.base.DriveSubsystem;
+import frc.robot.subsystems.base.Intake;
+import frc.robot.subsystems.base.Shooter;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RamseteCommand;
 import edu.wpi.first.wpilibj2.command.RunCommand;
@@ -33,11 +36,22 @@ import edu.wpi.first.wpilibj.RobotController;
  * the robot (including
  * subsystems, commands, and button mappings) should be declared here.
  */
+// @SuppressWarnings({"unused"})
 public class RobotContainer {
-        // The robot's subsystems
+        /**
+         * Drive Subsystem object
+         */
         private final DriveSubsystem m_robotDrive = new DriveSubsystem();
 
-        //Trajectory Manager
+        private final Shooter m_shooter = new Shooter();
+
+        private final Intake m_intake = new Intake();
+
+        private final Climber m_climber = new Climber();
+
+        /**
+         * Trajectory Manager object
+         */
         private final TrajectoryManager m_trajectoryManager = new TrajectoryManager();
 
         // Autonomous Option
